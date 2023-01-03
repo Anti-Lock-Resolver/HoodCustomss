@@ -22,6 +22,8 @@ MainSection:Item(
                     Text = "Lock made by Security.exe#0068",
                     Duration = 5
                 })
+		
+getgenv().AimKey =  ("q")  -- [ TOGGLE KEY: Toggles Silent Aim On And Off ]
 
 local SilentAim = true
 local LocalPlayer = game:GetService("Players").LocalPlayer
