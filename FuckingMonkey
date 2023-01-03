@@ -528,7 +528,7 @@ function AA1()
 game:GetService("RunService").heartbeat:Connect(function()
     if Toggled == true then
     local vel = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(100, -500, -330)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(100, 500, 330)
     game:GetService("RunService").RenderStepped:Wait()
     game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = vel
     end
@@ -563,6 +563,7 @@ MainSection:Item(
     "textbox",
     "Resolver",
     function(v)
+        
         if game.Players[v] then
 local RunService = game:GetService("RunService")
 
@@ -572,11 +573,13 @@ RunService.Heartbeat:Connect(function()
             if v.Name ~= game.Players.LocalPlayer.Name then
                 local hrp = v.Character.HumanoidRootPart
                 hrp.Velocity = Vector3.new(0, 0, 0)
+                hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
             end
         end
     end)
 end)
 end
+
     end,
     {Placeholder = "Name"}
 )
