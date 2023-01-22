@@ -2020,12 +2020,12 @@ end
  
 local Window = library:AddWindow("Security | Hood Customs", {
     main_color = Color3.fromRGB(10, 10, 10),
-    min_size = Vector2.new(450, 250),
+    min_size = Vector2.new(450, 245),
     toggle_key = Enum.KeyCode.RightShift,
     can_resize = false,
 })
  
-local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/farthefarter/e/main/e"))()
+local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/Anti-Lock-Resolver/faggot/main/dumbassmain"))()
 local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
 ESP:Toggle(false)
 ESP.Tracers = false
@@ -2067,7 +2067,7 @@ local bindableFunction= Instance.new("BindableFunction")
  
 game.StarterGui:SetCore("SendNotification", {
     Title = "Security";
-    Text = "Welcome User";
+    Text = "Welcome";
     Icon = "";
     Duration = 5;
     callbakc = bindableFunction;
@@ -2092,6 +2092,10 @@ end)
 ALTab:AddSwitch("Lag Prediction", function(bool)
     DaHoodSettings.Prediction.Lag = bool
 end)
+
+ALTab:AddSwitch("Hit all Airshots", function(bool)
+    Aiming.Airshots = true
+end)
  
 ALTab:AddSwitch("FOV Enabled", function(bool)
     Aiming.ShowFOV = bool
@@ -2112,10 +2116,6 @@ end, {
     ["max"] = 400,
     ["readonly"] = false,
 })
-
-ALTab:AddSwitch("Hit all Airshots", function(bool)
-    Aiming.Airshots = true
-end)
  
  SideTab:AddButton("Anti-Lock", function(bool)
 local NotifyLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro/main/ui"))()
